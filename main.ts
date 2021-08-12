@@ -18,6 +18,14 @@ function pressButton (button: string, num: number) {
             wrongGuess()
         }
         if (currentGuess == lights.length) {
+            pause(500)
+            music.playTone(523, music.beat(BeatFraction.Quarter))
+            music.playTone(622, music.beat(BeatFraction.Quarter))
+            music.playTone(784, music.beat(BeatFraction.Quarter))
+            music.playTone(932, music.beat(BeatFraction.Half))
+            music.playTone(784, music.beat(BeatFraction.Quarter))
+            music.playTone(932, music.beat(BeatFraction.Half))
+            pause(500)
             score += 1
             currentGuess = 0
             userTurn = false
